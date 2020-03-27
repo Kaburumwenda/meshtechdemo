@@ -1,0 +1,326 @@
+/*
+
+
+    font-family: 'Teko', sans-serif;
+
+    font-family: 'Changa', sans-serif;
+
+    font-family: 'Pragati Narrow', sans-serif;
+
+    font-family: 'Bungee Inline', cursive;
+
+
+*/
+/* header nav 
+*/
+.header_nav{
+    position: fixed !important;
+    z-index: 1;
+    width: 100%;
+}
+.cart_nav a{
+    color: rgb(187, 219, 70);
+    text-decoration: none;
+}
+.cart_nav a:hover{
+    color: orange;
+}
+.second-form input {
+    border-radius: 4px;
+    width: 100px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://i.postimg.cc/gjDmCnqx/search-512.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  
+  .first-form input:focus {
+    width: 50%;
+  }
+  .first-form input{
+    height: 30px;
+    border: 0.2px solid wheat;
+    margin-top: 10px;
+    width: 130px;
+    color: white;
+    border-radius: 10px;
+    background-color: #262626;
+}
+
+.contaner_two{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+.credetials{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    
+}
+.search_home{
+    
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    
+
+}
+.search_home input{
+    width: 450px;
+    border: transparent;
+}
+.form2{
+    display: flex;
+    
+
+}
+
+.header_top{
+    width: 100%;
+    height: 100px;
+    margin-top: 0px;
+    background-color:white;
+    position: fixed;
+    z-index: 1;
+}
+#header_top_nav{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+
+margin-bottom: 10px;
+}
+#header_top_nav input{
+    width: 500px;
+    border: 1px solid gray;
+    height: 40px;
+    border-radius: 5px;
+}
+.header-button{
+    border: transparent;
+    height: 40px;
+}
+.mesh_home{
+    margin-right: 70px;
+    font-size: 30px;
+   
+}
+.mesh_home a{
+    text-decoration: none;
+    font-family: 'Trade Winds', cursive;
+}
+.mesh_home a:hover{
+    color: orange;
+}
+.header_acc{
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.header_acc a{
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'Trade Winds', cursive;
+}
+.header_acc a:hover{
+    color: orange;
+}
+.header_cart{
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.header_cart a{
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'Trade Winds', cursive;
+    color: red;
+}
+#header_reg ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 70%;
+    
+
+}
+#header_reg li{
+    list-style: none;
+    margin: 5px ;
+}
+#header_reg a{
+    text-decoration: none;
+    color: black;
+}
+#header_reg a:hover{
+    color: orange;
+}
+
+/* MOBILE DESIGN 
+//MODILE 
+MOBILE
+*/
+.mobile-nav{
+    background-color: #008080;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+   
+}
+.mobile-nav1{
+    display: flex;
+    margin-top: 10px;
+}
+.spacer{
+    flex: 1;
+}
+.mobile-nav1 a{
+    color: white;
+    text-decoration: none;
+}
+.mobile-cart{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.mobile_acc a:hover{
+    color: orangered;
+}
+.mobile-cart a:hover{
+    color: orangered;
+}
+.mobile-fav a:hover{
+    color: orangered;
+}
+.mobile-reg{
+    background-color: white;
+    margin-top: 50px !important;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.modile_creditials{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.modile_creditials li{
+    list-style: none;
+}
+.modile_creditials a{
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bolder;
+}
+.modile_creditials a:hover{
+    color: orange;
+}
+.mobile-brand{
+    font-family: 'Bungee Inline', cursive;
+    font-size: 18px;
+}
+.mobile-brand a:hover{
+    color: orangered;
+}
+
+/*SEARCH BAR
+//SEARCH BAR
+*/
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #806000;
+    padding: 5px;
+    height: 30px;
+   outline: none;
+    background-color: #008080;
+    color: #ffff99;
+  }
+  .searchTerm::placeholder{
+      color: #dfcb1b;
+  }
+  .searchTerm:focus{
+    color: #00cc4e;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .searchButton:hover{
+      color: orange;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+@media (min-width: 650px){
+.first-form input{
+    display: none;
+}
+.credetials{
+    display: none;
+}
+.header_nav{
+    display: none;
+}
+.header_nav{
+    display: none;
+}
+.mobile-nav{
+    display: none;
+}
+}
+
+@media(max-width:900px){
+.mesh_home{
+    font-size: 20px;
+}
+#header_top_nav input{
+    width: 300px;
+    border: 1px solid gray;
+    height: 30px;
+    border-radius: 5px;
+}
+.header-button{
+    border: transparent;
+    height: 30px;
+}
+.header_top{
+    display: none !important;
+}
+}
+
+
+
+/* LOAD MORE
+ */

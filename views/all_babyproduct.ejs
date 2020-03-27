@@ -1,0 +1,54 @@
+<% include _layouts/header %>
+<!--class="row products container_products" id="cat-pro"-->
+
+    <div id="all_products">
+        <div class="row products" id="container_top">
+    
+            <% products.forEach(function(p){ %>
+                   <div class="col-12 col-md-3 col-lg-3 col-xs-6" id="container_allproducts">
+                    <div class="card  card_size">
+    
+    
+                        <div class="img-container">
+                         <p class="dis"style="font-weight: bold; font-family: 'Oswald';">Discout: Ksh<%= p.discount %></p>
+                        <a class="pa"  href="/babyproduct/<%= p.category %>/<%= p.slug %>">
+                             <img class="card-img-top img-responsive"src="/product_images/<%= p.id %>/<%= p.image %>" alt="">
+                         </a>
+                        </div>
+    
+    
+                        <div class="card-footer d-flex justify-content-between">
+                         <h6 style="font-weight: bold; font-family: 'Oswald';"><%= p.title %></h6>
+                        </div>
+                        
+    
+                        <div>
+                             <h4 style="font-family: 'Roboto Slab';">Ksh <%= p.price %></h4>
+                             <h5 style="font-family: 'Roboto Slab';"><strike class="strike">Ksh <%= p.price_off %></Ksh></strike></h5>
+                         </div>
+
+                         <div class="rating_con">
+                            <div class="rating">
+                                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                                <span><i class="fa fa-star-half" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="favorite">
+                                <span>
+                                   <a href="/fav/babyproduct/add/<%= p.slug %>"> <i class="fa fa-heart" aria-hidden="true"></i></a>
+                                   </span>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                       
+                   
+                   
+                <% }); %>
+            
+        </div>
+    </div>
+
+    <% include _layouts/footer %>

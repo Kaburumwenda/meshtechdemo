@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title> <%= title %></title>
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Changa|Pragati+Narrow|Teko&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/user.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
+        <link rel="stylesheet" href="/css/categories.css" />
+        <link rel="stylesheet" href="/css/index.css" />
+        <link rel="stylesheet" href="/css/search.css" />
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="ajaxbg">
+            <div class="ajaxinner">
+                <h3>You are now being redirected to paypal...</h3>
+                <img src="/images/aheader_topjax-loader.gif" alt=""/>
+            </div>
+        </div>
+        <div class="header_top">
+            <div id="header_reg">
+                <ul class="na">
+                    
+                    <% if (user) { %>
+                    <li><a href="/users/logout">Hi, <%= user.username %> ( logout )</a></li>
+                    <% } else {%>
+                    <li><a href="/users/register">Register</a></li>
+                    <li><a href="/users/login">Log in</a></li>
+                    <% } %>
+                    <% if (user && user.admin == 1) { %>
+                    <li><a href="/admin/products">Administrator</a></li>
+                    <% }%>
+                    
+                </ul>
+            </div>
+            <div id="header_top_nav">
+                <div class="mesh_home"><a href="/">MESHMALL</a></div>
+            <div>
+                <input type="search" placeholder="search products, brands and categories..">
+                <button type="submit" class="btn btn-default btn-success header-button">Search</button>
+            </div>
+            <div class="header_acc">
+                <a href="/users/register"><i class="fa fa-user" aria-hidden="true"></i>
+                Account</a></div>
+                <div class="header_cart">
+                    <a href="/cart/checkout">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+
+                         (
+                        <% if (typeof cart !== "undefined") { %>
+                        <%= cart.length %>
+                        <% } else {%>
+                        0
+                        <% } %>
+                    )</a>
+                </div>
+
+                <div class="header_cart">
+                    <a href="/fav/favourite">
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+
+                         |
+                        <% if (typeof fav !== "undefined") { %>
+                        <%= fav.length %>
+                        <% } else {%>
+                        0
+                        <% } %>
+                    |</a>
+                </div>
+            </div>
+            
+        </div>
+        
+            <!--MOBILE DESIGN
+                //MOBILE
+                //MOBILE
+            -->
+            <nav class="mobile-nav">
+                <div class="mobile-nav1">
+                    <div class="mobile-brand"><a href="/">MESHMALL</a></div>
+                    <div class="spacer"></div>
+
+                    <div class="mobile_acc"><a href="/users/register"><i class="fa fa-user" aria-hidden="true"></i></a></div>
+
+                    <div class="mobile-cart">
+                        <a href="/cart/checkout">
+                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+    
+                             (
+                            <% if (typeof cart !== "undefined") { %>
+                            <%= cart.length %>
+                            <% } else {%>
+                            0
+                            <% } %>
+                        )</a>
+                    </div>
+
+                    <div class="mobile-fav">
+                        <a href="/fav/favourite">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+    
+                             
+                            <% if (typeof fav !== "undefined") { %>
+                            <%= fav.length %>
+                            <% } else {%>
+                            0
+                            <% } %>
+                        |</a>
+                    </div>
+
+                </div>
+                <!--SEARCH BAR-->
+                <div class="wrap">
+                    <div class="search">
+                       <input type="text" class="searchTerm" placeholder="Search products, brands, categories .....">
+                       <button type="submit" class="searchButton">
+                         <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                 </div>
+                <!--Register & Login -->
+                <div class="mobile-reg">
+                    <ul class="modile_creditials">
+                    
+                        <% if (user) { %>
+                        <li><a href="/users/logout">Hi, <%= user.username %> ( logout )</a></li>
+                        <% } else {%>
+                        <li><a href="/users/register">Register</a></li>
+                        <li><a href="/users/login">Log in</a></li>
+                        <% } %>
+                        <% if (user && user.admin == 1) { %>
+                        <li><a href="/admin/products">Administrator</a></li>
+                        <% }%>
+                        
+                    </ul>
+                </div>
+            </nav>
+        <div class="container">
+           
+            
+            <%- messages('messages', locals) %>
+            
+            <% if (errors) {%>
+                <% errors.forEach(function(error) { %>
+                <div class="alert alert-danger">
+                    <%= error.msg %>
+                </div>
+                <% });%>
+            <% }%>
+            
+            <div class="row">
+                
+                <div class="col-xs-12 col-md-1"></div>
+                <div class="col-xs-12 col-md-8">
+                    
+                
+
+
+
+
+
